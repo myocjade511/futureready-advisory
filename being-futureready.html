@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1628">
+<title>Being FutureReady | FutureReady Advisory</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">FR</span>
+      <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leadership.html">Team</a>
+      <a href="being-futureready.html">Our Approach</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="nav-cta">Get Started</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+.bfr-hero{background:var(--navy);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.bfr-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(201,168,76,.09),transparent 65%)}
+.bfr-hero-inner{max-width:900px;margin:0 auto;position:relative}
+.what-section{background:var(--cream);padding:6rem 2rem}
+.what-inner{max-width:1200px;margin:0 auto}
+.what-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
+@media(max-width:768px){.what-grid{grid-template-columns:1fr;gap:3rem}}
+.what-visual{background:var(--navy);border-radius:12px;padding:2.5rem;display:flex;flex-direction:column;gap:1.25rem}
+.signal-row{display:flex;align-items:center;gap:1rem;padding:.875rem 1.25rem;border-radius:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07)}
+.signal-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dot-gold{background:var(--gold)}
+.dot-gray{background:rgba(255,255,255,.25)}
+.signal-row span{font-size:.85rem;color:rgba(255,255,255,.7);flex:1}
+.signal-row .tag{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;font-weight:600;padding:.25rem .6rem;border-radius:3px}
+.tag-signal{background:rgba(201,168,76,.2);color:var(--gold)}
+.tag-noise{background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)}
+.visual-label{font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);font-weight:600;margin-bottom:.25rem}
+
+.principles-section{background:var(--navy-mid);padding:6rem 2rem}
+.principles-inner{max-width:1200px;margin:0 auto}
+.principles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem}
+@media(max-width:640px){.principles-grid{grid-template-columns:1fr}}
+.principle-card{border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:2rem;background:rgba(255,255,255,.03);position:relative}
+.principle-num{position:absolute;top:1.5rem;right:1.5rem;font-family:"Playfair Display",serif;font-size:2.5rem;font-weight:700;color:rgba(201,168,76,.1);line-height:1}
+.principle-card h3{font-family:"Playfair Display",serif;color:var(--white);font-size:1.15rem;margin-bottom:.75rem;padding-right:3rem}
+.principle-card p{color:rgba(255,255,255,.55);font-size:.9rem;line-height:1.65}
+
+.contrast-section{background:var(--cream-dark);padding:6rem 2rem}
+.contrast-inner{max-width:1100px;margin:0 auto}
+.contrast-table{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:10px;overflow:hidden;box-shadow:var(--shadow-lg);margin-top:3rem}
+@media(max-width:640px){.contrast-table{grid-template-columns:1fr}}
+.contrast-col{display:flex;flex-direction:column;gap:2px}
+.contrast-header{padding:1.25rem 1.5rem;font-weight:700;font-size:.85rem;letter-spacing:1px;text-transform:uppercase}
+.contrast-header.bad{background:#1e1e2a;color:rgba(255,255,255,.4)}
+.contrast-header.good{background:var(--navy);color:var(--gold)}
+.contrast-row{padding:1rem 1.5rem;font-size:.9rem;line-height:1.5}
+.contrast-row.bad{background:#22222e;color:rgba(255,255,255,.5)}
+.contrast-row.good{background:var(--navy-light);color:rgba(255,255,255,.85)}
+
+.readiness-section{background:var(--gold);padding:6rem 2rem}
+.readiness-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:768px){.readiness-inner{grid-template-columns:1fr;gap:3rem}}
+.readiness-checks{display:flex;flex-direction:column;gap:.875rem}
+.readiness-check{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.25rem;background:rgba(10,22,40,.08);border-radius:6px}
+.check-icon{font-size:1.1rem;flex-shrink:0}
+.readiness-check p{font-size:.9rem;color:var(--navy);line-height:1.5;font-weight:500}
+</style>
+
+<section class="bfr-hero">
+  <div class="bfr-hero-inner">
+    <div class="section-label">Being FutureReady</div>
+    <h1 class="section-title light" style="font-size:clamp(2.2rem,4vw,3.2rem)">Readiness isn&rsquo;t a plan. It&rsquo;s a capability.</h1>
+    <p class="section-sub light" style="max-width:680px;margin-top:.5rem">Organizations that thrive through uncertainty don&rsquo;t predict the future &mdash; they build the decision-making muscle to move confidently regardless of what happens next.</p>
+  </div>
+</section>
+
+<section class="what-section">
+  <div class="what-inner">
+    <div class="fade-in">
+      <div class="section-label">What It Means</div>
+      <h2 class="section-title" class="section-heading">Separating signal from noise &mdash; at speed.</h2>
+    </div>
+    <div class="what-grid">
+      <div class="fade-in">
+        <p class="section-sub">Being FutureReady means your leadership team can distinguish the market signals that require decisive action from the noise that deserves monitoring. It means your decisions have explicit assumptions, defined owners, and pre-agreed triggers for adaptation.</p>
+        <p style="color:var(--gray);line-height:1.75;margin-top:1rem;font-size:.975rem">Most organizations react. FutureReady organizations anticipate &mdash; not because they have better data, but because they have better decision infrastructure.</p>
+        <div style="margin-top:2rem"><a href="diagnostic.html" class="btn-primary">Test Your Readiness &rarr;</a></div>
+      </div>
+      <div class="what-visual fade-in">
+        <div class="visual-label">Signal vs. Noise Filter</div>
+        <div class="signal-row"><div class="signal-dot dot-gold"></div><span>Competitor launched adjacent category product</span><span class="tag tag-signal">Signal</span></div>
+        <div class="signal-row"><div class="signal-dot dot-gray"></div><span>Industry conference buzz about AI transformation</span><span class="tag tag-noise">Noise</span></div>
+        <div class="signal-row"><div class="signal-dot dot-gold"></div><span>Top 3 accounts asking for feature X in 30 days</span><span class="tag tag-signal">Signal</span></div>
+        <div class="signal-row"><div class="signal-dot dot-gray"></div><span>New analyst report predicts category consolidation</span><span class="tag tag-noise">Monitor</span></div>
+        <div class="signal-row"><div class="signal-dot dot-gold"></div><span>NPS dropped 12 points in enterprise segment</span><span class="tag tag-signal">Signal</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="principles-section">
+  <div class="principles-inner">
+    <div style="max-width:600px" class="fade-in">
+      <div class="section-label">Our Principles</div>
+      <h2 class="section-title light" class="section-heading">What FutureReady organizations do differently.</h2>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card fade-in"><div class="principle-num">1</div><h3>Decisions have explicit owners</h3><p>Every major decision has one person accountable for the call. Not a committee. Not "leadership." One named person who owns the outcome.</p></div>
+      <div class="principle-card fade-in"><div class="principle-num">2</div><h3>Assumptions are written down</h3><p>Every decision rests on beliefs about the market, customers, or competition. FutureReady teams write those down &mdash; so they know exactly what would prove them wrong.</p></div>
+      <div class="principle-card fade-in"><div class="principle-num">3</div><h3>Triggers are pre-agreed</h3><p>Before a decision is made, the team agrees: "If X happens, we revisit." This prevents both panic pivots and costly stubbornness.</p></div>
+      <div class="principle-card fade-in"><div class="principle-num">4</div><h3>Speed comes from clarity</h3><p>Fast organizations aren&rsquo;t faster because they rush. They&rsquo;re faster because they spent time upfront clarifying what matters &mdash; so execution doesn&rsquo;t stall on debate.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contrast-section">
+  <div class="contrast-inner">
+    <div style="text-align:center;max-width:600px;margin:0 auto" class="fade-in">
+      <div class="section-label">The Difference</div>
+      <h2 class="section-title" class="section-heading">Reactive vs. FutureReady</h2>
+    </div>
+    <div class="contrast-table fade-in">
+      <div class="contrast-col">
+        <div class="contrast-header bad">Reactive Organization</div>
+        <div class="contrast-row bad">Priorities shift with every news cycle</div>
+        <div class="contrast-row bad">Decisions get revisited endlessly</div>
+        <div class="contrast-row bad">Ownership is diffuse &mdash; "we" own everything</div>
+        <div class="contrast-row bad">Pivots happen in crisis mode</div>
+        <div class="contrast-row bad">Strategy is a document, not a decision</div>
+        <div class="contrast-row bad">Alignment happens by accident</div>
+      </div>
+      <div class="contrast-col">
+        <div class="contrast-header good">FutureReady Organization</div>
+        <div class="contrast-row good">3&ndash;5 priorities that hold across the quarter</div>
+        <div class="contrast-row good">Decisions are made once, with clear triggers to revisit</div>
+        <div class="contrast-row good">One owner per decision &mdash; everyone knows who</div>
+        <div class="contrast-row good">Pivots are pre-planned responses, not reactions</div>
+        <div class="contrast-row good">Strategy is a set of explicit, testable decisions</div>
+        <div class="contrast-row good">Alignment is built in, not bolted on</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="readiness-section">
+  <div class="readiness-inner">
+    <div class="fade-in">
+      <div class="section-label" style="color:var(--navy)">Are You Ready?</div>
+      <h2 style="font-family:Playfair Display,serif;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--navy);font-weight:700;line-height:1.2;margin-bottom:1.25rem" class="section-heading">Six signs your organization is already FutureReady</h2>
+      <p style="color:var(--navy);opacity:.7;font-size:.975rem;line-height:1.7;margin-bottom:2rem">If you can answer yes to most of these, you&rsquo;re in strong shape. If not, that&rsquo;s exactly what we fix.</p>
+      <a href="diagnostic.html" class="btn-navy">Run the Full Diagnostic &rarr;</a>
+    </div>
+    <div class="readiness-checks fade-in">
+      <div class="readiness-check"><div class="check-icon">&#10003;</div><p>Your top 3 priorities are the same this week as they were last month</p></div>
+      <div class="readiness-check"><div class="check-icon">&#10003;</div><p>Every major initiative has a named decision-maker (not "leadership")</p></div>
+      <div class="readiness-check"><div class="check-icon">&#10003;</div><p>You could state the 3 assumptions your strategy depends on most</p></div>
+      <div class="readiness-check"><div class="check-icon">&#10003;</div><p>You know what signal would make you reconsider your biggest bet</p></div>
+      <div class="readiness-check"><div class="check-icon">&#10003;</div><p>Your team spends more time executing than debating direction</p></div>
+      <div class="readiness-check"><div class="check-icon">&#10003;</div><p>New market information changes what you monitor, not what you do</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">FR</span>
+        <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+      </a>
+      <p>Translating signals into confident growth.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="leadership.html">Leadership Team</a>
+        <a href="being-futureready.html">Being FutureReady</a>
+        <a href="solutions.html">Our Solutions</a>
+        <a href="diagnostic.html">Diagnostic</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/in/robgoldberg/" target="_blank">Robert Goldberg on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/jkleemktgii/" target="_blank">Jack Lee on LinkedIn</a>
+        <a href="contact.html">Schedule a Conversation</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FutureReady Advisory. All rights reserved.</p>
+  </div>
+</footer>
+<script src="shared.js"></script>
+
+<div style="position:fixed;inset:auto auto 40px -80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);filter:blur(18px);pointer-events:none;z-index:-1;"></div>
+
+</body>
+</html>

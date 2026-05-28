@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1628">
+<title>Home | FutureReady Advisory</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">FR</span>
+      <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leadership.html">Team</a>
+      <a href="being-futureready.html">Our Approach</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="nav-cta">Get Started</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:7rem 2rem 4rem}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 40%,rgba(201,168,76,.1),transparent 65%),radial-gradient(ellipse at 20% 80%,rgba(26,50,96,.6),transparent 60%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.eyebrow{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+.eyebrow::before{content:"";display:block;width:32px;height:1px;background:var(--gold)}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(2.5rem,5.5vw,4.2rem);color:var(--white);line-height:1.1;font-weight:700;max-width:780px;margin-bottom:1.75rem}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.65);max-width:560px;line-height:1.7;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:560px;margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.08)}
+.hero-stat .num{font-family:"Playfair Display",serif;font-size:2.2rem;font-weight:700;color:var(--gold)}
+.hero-stat .lbl{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.25rem}
+@media(max-width:500px){.hero-stats{grid-template-columns:1fr 1fr}}
+
+.problem-section{background:var(--cream);padding:6rem 2rem}
+.problem-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:768px){.problem-inner{grid-template-columns:1fr;gap:3rem}}
+.problem-cards{display:flex;flex-direction:column;gap:1rem}
+.problem-card{background:var(--white);border-left:3px solid var(--gold);padding:1.25rem 1.5rem;border-radius:0 4px 4px 0;box-shadow:var(--shadow)}
+.problem-card h4{font-weight:600;color:var(--navy);font-size:.95rem;margin-bottom:.35rem}
+.problem-card p{font-size:.875rem;color:var(--gray);line-height:1.55}
+
+.how-section{background:var(--navy);padding:6rem 2rem;position:relative;overflow:hidden}
+.how-section::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.06),transparent 70%)}
+.how-inner{max-width:1200px;margin:0 auto}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+@media(max-width:768px){.steps-grid{grid-template-columns:1fr}}
+.step-card{padding:2rem;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.03);transition:border-color .2s,transform .2s}
+.step-card:hover{border-color:rgba(201,168,76,.35);transform:translateY(-4px)}
+.step-num{font-family:"Playfair Display",serif;font-size:3.5rem;font-weight:700;color:rgba(201,168,76,.15);line-height:1;margin-bottom:.75rem}
+.step-card h3{font-family:"Playfair Display",serif;font-size:1.25rem;color:var(--white);margin-bottom:.75rem}
+.step-card p{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.65}
+
+.outcomes-section{background:var(--cream-dark);padding:6rem 2rem}
+.outcomes-inner{max-width:1200px;margin:0 auto}
+.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+@media(max-width:900px){.outcomes-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.outcomes-grid{grid-template-columns:1fr}}
+.outcome-item{background:var(--white);padding:1.75rem;border-radius:8px;box-shadow:var(--shadow);display:flex;gap:1rem;align-items:flex-start}
+.outcome-icon{font-size:1.5rem;flex-shrink:0}
+.outcome-item h4{font-weight:600;color:var(--navy);font-size:.95rem;margin-bottom:.35rem}
+.outcome-item p{font-size:.85rem;color:var(--gray);line-height:1.55}
+
+.stats-bar{background:var(--gold);padding:3.5rem 2rem}
+.stats-bar-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+@media(max-width:640px){.stats-bar-inner{grid-template-columns:1fr;text-align:center}}
+.stat-block .big{font-family:"Playfair Display",serif;font-size:3rem;font-weight:700;color:var(--navy);line-height:1}
+.stat-block .desc{font-size:.85rem;color:var(--navy);opacity:.7;margin-top:.5rem}
+
+.team-preview{background:var(--navy-mid);padding:6rem 2rem}
+.team-preview-inner{max-width:1200px;margin:0 auto}
+.team-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem}
+@media(max-width:640px){.team-cards{grid-template-columns:1fr}}
+.team-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;display:flex;transition:border-color .2s}
+.team-card:hover{border-color:rgba(201,168,76,.4)}
+.team-card img{width:130px;flex-shrink:0;object-fit:cover;object-position:center top}
+.team-card-body{padding:1.5rem}
+.team-card-body h3{font-family:"Playfair Display",serif;color:var(--white);font-size:1.1rem;margin-bottom:.25rem}
+.team-card-role{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.75rem}
+.team-card-body p{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.6}
+
+.home-cta{background:var(--cream);padding:7rem 2rem;text-align:center}
+.home-cta-inner{max-width:680px;margin:0 auto}
+.home-cta h2{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,2.75rem);color:var(--navy);margin-bottom:1.25rem}
+.home-cta p{color:var(--gray);font-size:1.05rem;margin-bottom:2.5rem;line-height:1.7}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+</style>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Strategic Advisory</div>
+    <h1>Translating Signals into <em>Confident Growth</em></h1>
+    <p class="hero-sub">FutureReady helps leadership teams turn ambiguous market signals into clear, testable decisions — and align execution before uncertainty becomes costly.</p>
+    <div class="hero-actions">
+      <a href="diagnostic.html" class="btn-primary">Run the Diagnostic &rarr;</a>
+      <a href="solutions.html" class="btn-outline">How It Works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">60%</div><div class="lbl">Faster decision cycles</div></div>
+      <div class="hero-stat"><div class="num">40%</div><div class="lbl">Less strategy drift</div></div>
+      <div class="hero-stat"><div class="num">3&times;</div><div class="lbl">Alignment improvement</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="problem-section">
+  <div class="problem-inner">
+    <div class="fade-in">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title" class="section-heading">You don&rsquo;t have a strategy problem. You have a decision problem.</h2>
+      <p class="section-sub">You have data, initiatives, and capable teams &mdash; and yet execution keeps drifting. The issue isn&rsquo;t effort. It&rsquo;s that the decisions behind your strategy are unclear, untested, or misaligned.</p>
+      <div style="margin-top:2rem"><a href="being-futureready.html" class="btn-navy">Learn Our Approach &rarr;</a></div>
+    </div>
+    <div class="problem-cards fade-in">
+      <div class="problem-card"><h4>Priorities keep shifting</h4><p>Every quarter brings a new direction. Teams lose confidence and momentum.</p></div>
+      <div class="problem-card"><h4>Decisions get revisited</h4><p>The same debates resurface month after month, consuming leadership bandwidth.</p></div>
+      <div class="problem-card"><h4>Execution drifts</h4><p>Teams work hard, but in slightly different directions. Results don&rsquo;t match effort.</p></div>
+      <div class="problem-card"><h4>Signals become noise</h4><p>You can&rsquo;t tell which market signal matters until it&rsquo;s too late to act decisively.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="how-inner">
+    <div style="text-align:center;max-width:600px;margin:0 auto" class="fade-in">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title light" class="section-heading">Three steps to decision clarity</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card fade-in"><div class="step-num">01</div><h3>What&rsquo;s Actually Changing</h3><p>We identify market, customer, and competitive signals that matter &mdash; separating inflection points from background noise.</p></div>
+      <div class="step-card fade-in"><div class="step-num">02</div><h3>What Matters Now</h3><p>We translate signals into 3&ndash;5 critical decisions. Not a 50-item priority list &mdash; the choices that actually move the needle.</p></div>
+      <div class="step-card fade-in"><div class="step-num">03</div><h3>How to Act Without Drift</h3><p>We align execution, define early warning triggers, and build adaptive mechanisms so your organization stays on course.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="outcomes-section">
+  <div class="outcomes-inner">
+    <div style="text-align:center;max-width:600px;margin:0 auto" class="fade-in">
+      <div class="section-label">What Changes in 30 Days</div>
+      <h2 class="section-title" class="section-heading">From uncertainty to actionable clarity.</h2>
+    </div>
+    <div class="outcomes-grid">
+      <div class="outcome-item fade-in"><div class="outcome-icon">&#127919;</div><div><h4>3&ndash;5 Priority Decisions</h4><p>A clear set of decisions that determine your next 6&ndash;12 months.</p></div></div>
+      <div class="outcome-item fade-in"><div class="outcome-icon">&#128203;</div><div><h4>Explicit Assumptions &amp; Risks</h4><p>Every decision comes with assumptions written down so you know what could prove you wrong.</p></div></div>
+      <div class="outcome-item fade-in"><div class="outcome-icon">&#128276;</div><div><h4>Early Warning Signals</h4><p>Defined triggers that tell you when to adapt &mdash; before the cost compounds.</p></div></div>
+      <div class="outcome-item fade-in"><div class="outcome-icon">&#9889;</div><div><h4>Pre-Aligned Triggers</h4><p>Your team knows in advance what conditions require a pivot. No more surprises.</p></div></div>
+      <div class="outcome-item fade-in"><div class="outcome-icon">&#128100;</div><div><h4>Clear Ownership</h4><p>Every decision has an owner. No more diffusion of responsibility.</p></div></div>
+      <div class="outcome-item fade-in"><div class="outcome-icon">&#128640;</div><div><h4>Aligned Execution</h4><p>Your team stops working on initiatives that don&rsquo;t serve the critical few decisions.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-block fade-in"><div class="big">60%</div><div class="desc">Faster decision cycle time &mdash; SaaS, $200M ARR</div></div>
+    <div class="stat-block fade-in"><div class="big">40%</div><div class="desc">Reduction in strategy drift within one quarter</div></div>
+    <div class="stat-block fade-in"><div class="big">3&times;</div><div class="desc">Increase in cross-functional alignment score</div></div>
+  </div>
+</div>
+
+<section class="team-preview">
+  <div class="team-preview-inner">
+    <div style="max-width:600px;margin-bottom:3rem" class="fade-in">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title light" class="section-heading">Experience you can trust.</h2>
+      <p class="section-sub light">Decades of experience across strategy, market intelligence, and execution. We&rsquo;ve sat where you sit.</p>
+    </div>
+    <div class="team-cards">
+      <div class="team-card fade-in">
+        <img src="img/rob.jpg" alt="Robert Goldberg" style="height:180px">
+        <div class="team-card-body">
+          <h3>Robert Goldberg</h3>
+          <div class="team-card-role">Managing Partner &mdash; Strategy &amp; Market Intelligence</div>
+          <p>Strategy and market intelligence executive specializing in portfolio strategy, capital allocation, and data-driven decision-making.</p>
+        </div>
+      </div>
+      <div class="team-card fade-in">
+        <img src="img/jack.jpg" alt="Jack Lee" style="height:180px">
+        <div class="team-card-body">
+          <h3>Jack Lee</h3>
+          <div class="team-card-role">Partner &mdash; Market Development</div>
+          <p>Strategic advisor specializing in market development, communications strategy, and business growth across North America, Africa, and Europe.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:2rem" class="fade-in"><a href="leadership.html" class="btn-outline">Meet the Full Team &rarr;</a></div>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="home-cta-inner fade-in">
+    <div class="section-label" style="text-align:center">Get Started</div>
+    <h2 class="section-heading">Start with your most important decision.</h2>
+    <p>Every engagement begins by identifying the decisions that matter most and the uncertainty behind them. Book a free 30-minute strategy diagnosis.</p>
+    <div class="cta-actions">
+      <a href="diagnostic.html" class="btn-primary">Run the Diagnostic &rarr;</a>
+      <a href="contact.html" class="btn-navy">Schedule a Conversation</a>
+    </div>
+    <p style="margin-top:1.5rem;font-size:.82rem;color:#aaa">No commitment. No sales pitch. Just a focused conversation about the one decision costing you the most right now.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">FR</span>
+        <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+      </a>
+      <p>Translating signals into confident growth.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="leadership.html">Leadership Team</a>
+        <a href="being-futureready.html">Being FutureReady</a>
+        <a href="solutions.html">Our Solutions</a>
+        <a href="diagnostic.html">Diagnostic</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/in/robgoldberg/" target="_blank">Robert Goldberg on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/jkleemktgii/" target="_blank">Jack Lee on LinkedIn</a>
+        <a href="contact.html">Schedule a Conversation</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FutureReady Advisory. All rights reserved.</p>
+  </div>
+</footer>
+<script src="shared.js"></script>
+
+<div style="position:fixed;inset:auto auto 40px -80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);filter:blur(18px);pointer-events:none;z-index:-1;"></div>
+
+</body>
+</html>

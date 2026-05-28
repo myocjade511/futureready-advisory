@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1628">
+<title>Diagnostic | FutureReady Advisory</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">FR</span>
+      <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leadership.html">Team</a>
+      <a href="being-futureready.html">Our Approach</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="nav-cta">Get Started</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+.diag-hero{background:var(--navy);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.diag-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(201,168,76,.1),transparent 65%)}
+.diag-hero-inner{max-width:900px;margin:0 auto;position:relative}
+.diag-section{background:var(--cream);padding:6rem 2rem}
+.diag-inner{max-width:1000px;margin:0 auto}
+.diag-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:4rem}
+@media(max-width:768px){.diag-intro{grid-template-columns:1fr;gap:2rem}}
+.diag-card{background:var(--white);border-radius:12px;padding:2.5rem;box-shadow:var(--shadow-lg);margin-bottom:1.5rem}
+.diag-card h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:1.3rem;margin-bottom:.75rem}
+.diag-card p{color:var(--gray);line-height:1.7;font-size:.95rem}
+.questions-section{background:var(--cream-dark);padding:6rem 2rem}
+.questions-inner{max-width:900px;margin:0 auto}
+.question-group{margin-bottom:3rem}
+.question-group h3{font-family:"Playfair Display",serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
+.q-num{background:var(--navy);color:var(--gold);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0}
+.question-item{background:var(--white);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:.75rem;box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.question-text{font-size:.9rem;color:var(--text);line-height:1.5;flex:1}
+.q-score{display:flex;gap:.4rem}
+.q-dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--cream-dark);cursor:pointer;transition:background .15s}
+.q-dot.filled{background:var(--gold);border-color:var(--gold)}
+.score-section{background:var(--navy);padding:6rem 2rem}
+.score-inner{max-width:900px;margin:0 auto}
+.score-bands{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+@media(max-width:640px){.score-bands{grid-template-columns:1fr}}
+.score-band{border-radius:8px;padding:1.75rem;border:1px solid rgba(255,255,255,.08)}
+.score-band h4{font-family:"Playfair Display",serif;font-size:1rem;margin-bottom:.5rem}
+.score-band p{font-size:.875rem;line-height:1.6;opacity:.65}
+.band-red h4{color:#f87171}.band-amber h4{color:#fbbf24}.band-green h4{color:#6ee7b7}
+.cta-section{background:var(--gold);padding:5rem 2rem;text-align:center}
+.cta-inner{max-width:680px;margin:0 auto}
+.cta-inner h2{font-family:"Playfair Display",serif;font-size:clamp(1.75rem,3.5vw,2.5rem);color:var(--navy);margin-bottom:1rem}
+.cta-inner p{color:var(--navy);opacity:.75;line-height:1.7;margin-bottom:2rem}
+</style>
+
+<section class="diag-hero">
+  <div class="diag-hero-inner">
+    <div class="section-label">FutureReady Diagnostic</div>
+    <h1 class="section-title light" style="font-size:clamp(2.2rem,4vw,3.2rem)">How ready is your organization to act on what&rsquo;s changing?</h1>
+    <p class="section-sub light" style="max-width:680px;margin-top:.5rem">This 10-minute assessment identifies the specific gaps in your decision-making infrastructure &mdash; and gives you a clear starting point for building FutureReady capability.</p>
+  </div>
+</section>
+
+<section class="diag-section">
+  <div class="diag-inner">
+    <div class="diag-intro">
+      <div class="fade-in">
+        <div class="section-label">What This Is</div>
+        <h2 class="section-title" class="section-heading">A diagnostic built for leaders, not consultants.</h2>
+        <p class="section-sub">Most assessments are designed to sell you something. This one is designed to tell you something true about how your organization makes decisions &mdash; even if the answer is uncomfortable.</p>
+      </div>
+      <div class="fade-in">
+        <div class="diag-card"><h3>What you&rsquo;ll get</h3><p>A clear picture of where your decision-making infrastructure is strong, where it has dangerous gaps, and which gaps to address first. Takes 10 minutes. Results are immediate.</p></div>
+        <div class="diag-card"><h3>Who it&rsquo;s for</h3><p>CEOs, COOs, CSOs, and leadership teams who want to move faster and with more confidence &mdash; and need to know what&rsquo;s actually slowing them down.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="questions-section">
+  <div class="questions-inner">
+    <div style="margin-bottom:3rem" class="fade-in">
+      <div class="section-label">The Questions</div>
+      <h2 class="section-title" class="section-heading">Answer honestly. Pressure-test your instincts.</h2>
+      <p class="section-sub">Rate each statement 1&ndash;5 (1 = not at all true, 5 = absolutely true for our organization).</p>
+    </div>
+
+    <div class="question-group fade-in">
+      <h3><div class="q-num">A</div> Decision Clarity</h3>
+      <div class="question-item"><span class="question-text">We could name our top 3 strategic priorities and they would be the same ones we named 90 days ago.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+      <div class="question-item"><span class="question-text">Every major initiative has one named person accountable for the decision, not "leadership" or a committee.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+      <div class="question-item"><span class="question-text">We rarely revisit decisions that were already made &mdash; unless new evidence genuinely warrants it.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+    </div>
+
+    <div class="question-group fade-in">
+      <h3><div class="q-num">B</div> Market Intelligence</h3>
+      <div class="question-item"><span class="question-text">We can distinguish which market signals require action from those that just require monitoring.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+      <div class="question-item"><span class="question-text">We know what our top 3 competitors are doing and how it affects our strategy right now.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+      <div class="question-item"><span class="question-text">Our customer intelligence is based on structured data, not anecdotes from the sales team.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+    </div>
+
+    <div class="question-group fade-in">
+      <h3><div class="q-num">C</div> Execution Alignment</h3>
+      <div class="question-item"><span class="question-text">If you asked each member of our leadership team to list our top 3 priorities, they would give the same answer.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+      <div class="question-item"><span class="question-text">Our teams spend more time executing than debating what we should be working on.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+      <div class="question-item"><span class="question-text">When conditions change, our team adapts execution without requiring a full strategy re-plan.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+    </div>
+
+    <div class="question-group fade-in">
+      <h3><div class="q-num">D</div> Adaptive Capacity</h3>
+      <div class="question-item"><span class="question-text">We have pre-agreed triggers: specific conditions that would cause us to revisit our most important decisions.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+      <div class="question-item"><span class="question-text">The assumptions behind our biggest bets are written down and reviewed quarterly.</span><div class="q-score"><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div><div class="q-dot"></div></div></div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem" class="fade-in">
+      <a href="contact.html" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem">Discuss Your Results with Us &rarr;</a>
+      <p style="margin-top:1rem;font-size:.82rem;color:var(--gray)">We&rsquo;ll review your scores and give you a personalized starting point. Free, no commitment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="score-section">
+  <div class="score-inner">
+    <div style="max-width:600px" class="fade-in">
+      <div class="section-label">Reading Your Score</div>
+      <h2 class="section-title light" class="section-heading">What your results mean.</h2>
+    </div>
+    <div class="score-bands">
+      <div class="score-band band-red fade-in"><h4>10&ndash;25: At Risk</h4><p>Significant gaps in decision infrastructure. Strategy drift is likely already costing you. Prioritize Decision Clarity Sprint immediately.</p></div>
+      <div class="score-band band-amber fade-in"><h4>26&ndash;40: Developing</h4><p>Some strong foundations but critical gaps remain. You&rsquo;re moving, but losing energy to misalignment. Focus on the 2&ndash;3 lowest-scoring areas first.</p></div>
+      <div class="score-band band-green fade-in"><h4>41&ndash;55: FutureReady</h4><p>You have strong decision infrastructure. The opportunity now is to formalize and systematize what&rsquo;s working &mdash; so it survives leadership changes and growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner fade-in">
+    <h2 class="section-heading">Ready to talk through your score?</h2>
+    <p>Share your results with us and we&rsquo;ll give you a specific, actionable starting point &mdash; based on where your organization actually is, not where you want it to be.</p>
+    <a href="contact.html" class="btn-navy">Schedule a Free 30-Minute Call &rarr;</a>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll(".q-score").forEach(scoreEl => {
+  const dots = scoreEl.querySelectorAll(".q-dot");
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      dots.forEach((d, j) => d.classList.toggle("filled", j <= i));
+    });
+  });
+});
+</script>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">FR</span>
+        <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+      </a>
+      <p>Translating signals into confident growth.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="leadership.html">Leadership Team</a>
+        <a href="being-futureready.html">Being FutureReady</a>
+        <a href="solutions.html">Our Solutions</a>
+        <a href="diagnostic.html">Diagnostic</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/in/robgoldberg/" target="_blank">Robert Goldberg on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/jkleemktgii/" target="_blank">Jack Lee on LinkedIn</a>
+        <a href="contact.html">Schedule a Conversation</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FutureReady Advisory. All rights reserved.</p>
+  </div>
+</footer>
+<script src="shared.js"></script>
+
+<div style="position:fixed;inset:auto auto 40px -80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);filter:blur(18px);pointer-events:none;z-index:-1;"></div>
+
+</body>
+</html>

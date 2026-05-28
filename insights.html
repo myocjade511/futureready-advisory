@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1628">
+<title>Insights | FutureReady Advisory</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">FR</span>
+      <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leadership.html">Team</a>
+      <a href="being-futureready.html">Our Approach</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="nav-cta">Get Started</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+.ins-hero{background:var(--navy);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.ins-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 40% 60%,rgba(201,168,76,.09),transparent 65%)}
+.ins-hero-inner{max-width:900px;margin:0 auto;position:relative}
+.insights-section{background:var(--cream);padding:6rem 2rem}
+.insights-inner{max-width:1200px;margin:0 auto}
+.featured-article{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:5rem;background:var(--white);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg)}
+@media(max-width:768px){.featured-article{grid-template-columns:1fr}}
+.featured-img{background:var(--navy-mid);min-height:320px;position:relative;display:flex;align-items:center;justify-content:center;padding:3rem}
+.featured-quote{font-family:"Playfair Display",serif;font-size:1.6rem;color:var(--white);line-height:1.4;text-align:center;font-style:italic}
+.featured-quote::before{content:"C";font-size:4rem;color:var(--gold);line-height:.5;display:block;margin-bottom:.5rem}
+.featured-content{padding:3rem}
+.article-tag{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.75rem}
+.featured-content h2{font-family:"Playfair Display",serif;font-size:1.6rem;color:var(--navy);margin-bottom:1rem;line-height:1.3}
+.featured-content p{color:var(--gray);line-height:1.75;font-size:.95rem;margin-bottom:1.5rem}
+.read-more{color:var(--navy);font-weight:600;font-size:.875rem;text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:2px;display:inline-flex;align-items:center;gap:.4rem;transition:color .2s}
+.read-more:hover{color:var(--gold)}
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+@media(max-width:900px){.articles-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.articles-grid{grid-template-columns:1fr}}
+.article-card{background:var(--white);border-radius:8px;box-shadow:var(--shadow);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.article-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.article-accent{height:5px;background:var(--gold)}
+.article-body{padding:1.75rem}
+.article-body .article-tag{display:block;margin-bottom:.5rem}
+.article-body h3{font-family:"Playfair Display",serif;color:var(--navy);font-size:1.05rem;line-height:1.35;margin-bottom:.75rem}
+.article-body p{font-size:.875rem;color:var(--gray);line-height:1.6;margin-bottom:1.25rem}
+.article-meta{font-size:.78rem;color:rgba(0,0,0,.35);display:flex;gap:.75rem;align-items:center}
+.newsletter-section{background:var(--navy-mid);padding:6rem 2rem}
+.newsletter-inner{max-width:700px;margin:0 auto;text-align:center}
+.newsletter-inner h2{font-family:"Playfair Display",serif;font-size:clamp(1.75rem,3.5vw,2.5rem);color:var(--white);margin-bottom:1rem}
+.newsletter-inner p{color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:2rem}
+.newsletter-form{display:flex;gap:.75rem;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.newsletter-form input{flex:1;min-width:220px;padding:.875rem 1.25rem;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:var(--white);border-radius:var(--radius);font-family:"DM Sans",sans-serif;font-size:.9rem;outline:none;transition:border-color .2s}
+.newsletter-form input::placeholder{color:rgba(255,255,255,.35)}
+.newsletter-form input:focus{border-color:var(--gold)}
+</style>
+
+<section class="ins-hero">
+  <div class="ins-hero-inner">
+    <div class="section-label">Insights</div>
+    <h1 class="section-title light" style="font-size:clamp(2.2rem,4vw,3.2rem)">Thinking on strategy, uncertainty, and decision-making.</h1>
+    <p class="section-sub light" style="max-width:640px;margin-top:.5rem">Practical frameworks and perspectives from our work with leadership teams navigating real strategic challenges.</p>
+  </div>
+</section>
+
+<section class="insights-section">
+  <div class="insights-inner">
+
+    <div class="featured-article fade-in">
+      <div class="featured-img">
+        <div class="featured-quote">The question is never whether to decide. It&rsquo;s whether you know what you&rsquo;re deciding.</div>
+      </div>
+      <div class="featured-content">
+        <div class="article-tag">Featured</div>
+        <h2 class="section-heading">Why Your Strategy Isn&rsquo;t the Problem</h2>
+        <p>Most leadership teams don&rsquo;t suffer from a lack of strategy. They suffer from having too many strategies &mdash; and too few clear decisions. Here&rsquo;s how to tell the difference and what to do about it.</p>
+        <a href="contact.html" class="read-more">Read the full piece &rarr;</a>
+      </div>
+    </div>
+
+    <div style="margin-bottom:2rem" class="fade-in">
+      <div class="section-label">Recent Thinking</div>
+      <h2 class="section-title" class="section-heading">Frameworks for the decisions that matter.</h2>
+    </div>
+
+    <div class="articles-grid">
+      <div class="article-card fade-in">
+        <div class="article-accent"></div>
+        <div class="article-body">
+          <span class="article-tag">Decision-Making</span>
+          <h3>The Five Questions You Should Ask Before Any Major Decision</h3>
+          <p>A repeatable pre-decision checklist that surfaces hidden assumptions and prevents the most common strategic mistakes.</p>
+          <div class="article-meta"><span>Robert Goldberg</span><span>&middot;</span><span>6 min read</span></div>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-accent"></div>
+        <div class="article-body">
+          <span class="article-tag">Market Intelligence</span>
+          <h3>Signal vs. Noise: A Framework for Competitive Intelligence That Actually Works</h3>
+          <p>How to build a systematic approach to monitoring your competitive landscape without drowning in information.</p>
+          <div class="article-meta"><span>Jack Lee</span><span>&middot;</span><span>8 min read</span></div>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-accent"></div>
+        <div class="article-body">
+          <span class="article-tag">Execution</span>
+          <h3>Why Aligned Teams Move Faster: The Math Behind Decision Clarity</h3>
+          <p>The counterintuitive reason that spending more time upfront on decision clarity actually accelerates execution velocity.</p>
+          <div class="article-meta"><span>Robert Goldberg</span><span>&middot;</span><span>5 min read</span></div>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-accent"></div>
+        <div class="article-body">
+          <span class="article-tag">Strategy</span>
+          <h3>The Assumption Registry: How to Make Your Strategy Falsifiable</h3>
+          <p>Great strategy has clear assumptions. Here&rsquo;s a practical tool for writing them down in a way your team will actually use.</p>
+          <div class="article-meta"><span>Robert Goldberg</span><span>&middot;</span><span>7 min read</span></div>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-accent"></div>
+        <div class="article-body">
+          <span class="article-tag">Market Development</span>
+          <h3>Entering Emerging Markets Without the Usual Mistakes</h3>
+          <p>Lessons from market entry across Africa, Europe, and North America &mdash; and the decision traps that catch most leadership teams off guard.</p>
+          <div class="article-meta"><span>Jack Lee</span><span>&middot;</span><span>9 min read</span></div>
+        </div>
+      </div>
+      <div class="article-card fade-in">
+        <div class="article-accent"></div>
+        <div class="article-body">
+          <span class="article-tag">Leadership</span>
+          <h3>The Difference Between a Strategy Review and a Strategy</h3>
+          <p>Why most quarterly strategy reviews are theater &mdash; and what to do in a two-hour session that actually moves the needle.</p>
+          <div class="article-meta"><span>Robert Goldberg</span><span>&middot;</span><span>6 min read</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <div class="newsletter-inner fade-in">
+    <div class="section-label" style="justify-content:center;display:flex">Stay Sharp</div>
+    <h2 class="section-heading">The FutureReady Brief</h2>
+    <p>A monthly note on strategy, signals, and decisions worth thinking about. No noise. No sales. Just clear thinking for leaders navigating real uncertainty.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com">
+      <a href="contact.html" class="btn-primary">Subscribe</a>
+    </div>
+    <p style="margin-top:1.25rem;font-size:.8rem;color:rgba(255,255,255,.3)">Sent monthly. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">FR</span>
+        <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+      </a>
+      <p>Translating signals into confident growth.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="leadership.html">Leadership Team</a>
+        <a href="being-futureready.html">Being FutureReady</a>
+        <a href="solutions.html">Our Solutions</a>
+        <a href="diagnostic.html">Diagnostic</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/in/robgoldberg/" target="_blank">Robert Goldberg on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/jkleemktgii/" target="_blank">Jack Lee on LinkedIn</a>
+        <a href="contact.html">Schedule a Conversation</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FutureReady Advisory. All rights reserved.</p>
+  </div>
+</footer>
+<script src="shared.js"></script>
+
+<div style="position:fixed;inset:auto auto 40px -80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);filter:blur(18px);pointer-events:none;z-index:-1;"></div>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1628">
+<title>Contact Us | FutureReady Advisory</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">FR</span>
+      <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="leadership.html">Team</a>
+      <a href="being-futureready.html">Our Approach</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="nav-cta">Get Started</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+.contact-hero{background:var(--navy);padding:9rem 2rem 5rem;position:relative;overflow:hidden}
+.contact-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(201,168,76,.09),transparent 65%)}
+.contact-hero-inner{max-width:900px;margin:0 auto;position:relative}
+.contact-section{background:var(--cream);padding:6rem 2rem}
+.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+@media(max-width:768px){.contact-inner{grid-template-columns:1fr;gap:3rem}}
+.contact-info .section-label{margin-bottom:.75rem}
+.contact-info h2{font-family:"Playfair Display",serif;font-size:2rem;color:var(--navy);margin-bottom:1rem}
+.contact-info p{color:var(--gray);line-height:1.75;font-size:.975rem;margin-bottom:1.5rem}
+.contact-methods{display:flex;flex-direction:column;gap:1.25rem;margin:2rem 0}
+.contact-method{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;background:var(--white);border-radius:8px;box-shadow:var(--shadow)}
+.contact-method-icon{font-size:1.5rem;flex-shrink:0}
+.contact-method h4{font-weight:600;color:var(--navy);font-size:.9rem;margin-bottom:.25rem}
+.contact-method p{font-size:.85rem;color:var(--gray);line-height:1.5}
+.contact-method a{font-size:.85rem;color:var(--navy);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold)}
+.team-contact{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+@media(max-width:400px){.team-contact{grid-template-columns:1fr}}
+.team-contact-card{background:var(--white);border-radius:8px;padding:1.25rem;box-shadow:var(--shadow);display:flex;gap:.875rem;align-items:center}
+.team-contact-card img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0}
+.team-contact-card h4{font-weight:600;color:var(--navy);font-size:.875rem;margin-bottom:.2rem}
+.team-contact-card a{font-size:.78rem;color:var(--gold);text-decoration:none;font-weight:600}
+.contact-form-wrap{background:var(--white);border-radius:12px;padding:2.5rem;box-shadow:var(--shadow-lg)}
+.contact-form-wrap h3{font-family:"Playfair Display",serif;font-size:1.5rem;color:var(--navy);margin-bottom:.5rem}
+.contact-form-wrap p{color:var(--gray);font-size:.9rem;margin-bottom:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+.form-group{margin-bottom:1.25rem}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);letter-spacing:.5px;margin-bottom:.45rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:.875rem 1rem;border:1.5px solid rgba(0,0,0,.1);border-radius:var(--radius);font-family:"DM Sans",sans-serif;font-size:.9rem;color:var(--text);background:var(--cream);outline:none;transition:border-color .2s;resize:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);background:var(--white)}
+.form-group select{cursor:pointer}
+.submit-btn{width:100%;background:var(--navy);color:var(--white);border:none;padding:1rem 2rem;border-radius:var(--radius);font-family:"DM Sans",sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:background .2s,transform .15s;letter-spacing:.3px}
+.submit-btn:hover{background:var(--navy-light);transform:translateY(-1px)}
+.what-happens{background:var(--navy-mid);padding:5rem 2rem}
+.what-happens-inner{max-width:900px;margin:0 auto}
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+@media(max-width:640px){.steps-row{grid-template-columns:1fr}}
+.step-item{text-align:center}
+.step-item .step-icon{font-size:2.5rem;margin-bottom:1rem}
+.step-item h4{font-family:"Playfair Display",serif;color:var(--white);font-size:1.05rem;margin-bottom:.5rem}
+.step-item p{font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.6}
+</style>
+
+<section class="contact-hero">
+  <div class="contact-hero-inner">
+    <div class="section-label">Contact Us</div>
+    <h1 class="section-title light" style="font-size:clamp(2.2rem,4vw,3.2rem)">Let&rsquo;s start with your most important decision.</h1>
+    <p class="section-sub light" style="max-width:640px;margin-top:.5rem">Every engagement starts with one conversation. Tell us what you&rsquo;re navigating and we&rsquo;ll tell you how we can help.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-info fade-in">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-heading">No pitch. Just a real conversation.</h2>
+      <p>We start every potential engagement the same way: a focused 30-minute conversation about the decision you&rsquo;re navigating. If we can help, we&rsquo;ll tell you how. If we can&rsquo;t, we&rsquo;ll tell you that too.</p>
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-method-icon">&#128337;</div>
+          <div><h4>Book a 30-Minute Call</h4><p>Pick a time that works. We&rsquo;ll come prepared with specific questions about your context.</p></div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon">&#128140;</div>
+          <div><h4>Send a Message</h4><p>Prefer to share context first? Use the form and we&rsquo;ll respond within one business day.</p></div>
+        </div>
+      </div>
+      <div class="section-label" style="margin-top:2.5rem">Talk Directly To</div>
+      <div class="team-contact">
+        <div class="team-contact-card">
+          <img src="img/rob.jpg" alt="Robert Goldberg">
+          <div><h4>Robert Goldberg</h4><a href="https://www.linkedin.com/in/robgoldberg/" target="_blank">LinkedIn &rarr;</a></div>
+        </div>
+        <div class="team-contact-card">
+          <img src="img/jack.jpg" alt="Jack Lee">
+          <div><h4>Jack Lee</h4><a href="https://www.linkedin.com/in/jkleemktgii/" target="_blank">LinkedIn &rarr;</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap fade-in">
+      <h3>Tell Us What You&rsquo;re Navigating</h3>
+      <p>We&rsquo;ll review your message and follow up within one business day.</p>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Work Email</label><input type="email" placeholder="jane@company.com"></div>
+      <div class="form-group"><label>Company</label><input type="text" placeholder="Acme Corp"></div>
+      <div class="form-group"><label>Role</label><input type="text" placeholder="CEO, CSO, COO..."></div>
+      <div class="form-group">
+        <label>What are you navigating?</label>
+        <select>
+          <option value="">Select the closest description</option>
+          <option>We have too many priorities and need to focus</option>
+          <option>We need market intelligence before a major decision</option>
+          <option>Our teams are misaligned and execution is drifting</option>
+          <option>We&rsquo;re facing a major strategic choice (M&amp;A, pivot, entry)</option>
+          <option>We want an ongoing strategic thinking partner</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Give us a little context</label><textarea rows="4" placeholder="What&rsquo;s the decision you&rsquo;re navigating? What&rsquo;s at stake?"></textarea></div>
+      <button class="submit-btn" type="button">Send Message &rarr;</button>
+      <p style="margin-top:1rem;font-size:.78rem;color:var(--gray);text-align:center">We respond within one business day. Your information is never shared.</p>
+    </div>
+  </div>
+</section>
+
+<section class="what-happens">
+  <div class="what-happens-inner">
+    <div style="text-align:center;max-width:600px;margin:0 auto" class="fade-in">
+      <div class="section-label">What Happens Next</div>
+      <h2 class="section-title light" class="section-heading">Simple, fast, respectful of your time.</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step-item fade-in"><div class="step-icon">&#128140;</div><h4>You Send a Message</h4><p>Take 5 minutes to describe what you&rsquo;re navigating. The more specific, the better the conversation.</p></div>
+      <div class="step-item fade-in"><div class="step-icon">&#128337;</div><h4>We Schedule a Call</h4><p>Within one business day, we&rsquo;ll confirm a 30-minute slot that works for both of us.</p></div>
+      <div class="step-item fade-in"><div class="step-icon">&#127919;</div><h4>You Get Clarity</h4><p>We come to the call prepared. You leave with a clear sense of your options and a specific next step.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">FR</span>
+        <span class="logo-text">FutureReady<span class="logo-accent"> Advisory</span></span>
+      </a>
+      <p>Translating signals into confident growth.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="leadership.html">Leadership Team</a>
+        <a href="being-futureready.html">Being FutureReady</a>
+        <a href="solutions.html">Our Solutions</a>
+        <a href="diagnostic.html">Diagnostic</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/in/robgoldberg/" target="_blank">Robert Goldberg on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/jkleemktgii/" target="_blank">Jack Lee on LinkedIn</a>
+        <a href="contact.html">Schedule a Conversation</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FutureReady Advisory. All rights reserved.</p>
+  </div>
+</footer>
+<script src="shared.js"></script>
+
+<div style="position:fixed;inset:auto auto 40px -80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);filter:blur(18px);pointer-events:none;z-index:-1;"></div>
+
+</body>
+</html>
