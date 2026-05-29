@@ -1,0 +1,8 @@
+{
+  "name": "futureready-contact-api",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "agentmail": "^0.5.3"
+  }
+}

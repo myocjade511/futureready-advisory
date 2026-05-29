@@ -125,15 +125,15 @@
       <h3>Tell Us What You&rsquo;re Navigating</h3>
       <p>We&rsquo;ll review your message and follow up within one business day.</p>
       <div class="form-row">
-        <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
-        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        <div class="form-group"><label>First Name</label><input id="contact-first" type="text" placeholder="Jane"></div>
+        <div class="form-group"><label>Last Name</label><input id="contact-last" type="text" placeholder="Smith"></div>
       </div>
-      <div class="form-group"><label>Work Email</label><input type="email" placeholder="jane@company.com"></div>
-      <div class="form-group"><label>Company</label><input type="text" placeholder="Acme Corp"></div>
-      <div class="form-group"><label>Role</label><input type="text" placeholder="CEO, CSO, COO..."></div>
+      <div class="form-group"><label>Work Email</label><input id="contact-email" type="email" placeholder="jane@company.com"></div>
+      <div class="form-group"><label>Company</label><input id="contact-company" type="text" placeholder="Acme Corp"></div>
+      <div class="form-group"><label>Role</label><input id="contact-role" type="text" placeholder="CEO, CSO, COO..."></div>
       <div class="form-group">
         <label>What are you navigating?</label>
-        <select>
+        <select id="contact-topic">
           <option value="">Select the closest description</option>
           <option>We have too many priorities and need to focus</option>
           <option>We need market intelligence before a major decision</option>
@@ -143,9 +143,9 @@
           <option>Something else</option>
         </select>
       </div>
-      <div class="form-group"><label>Give us a little context</label><textarea rows="4" placeholder="What&rsquo;s the decision you&rsquo;re navigating? What&rsquo;s at stake?"></textarea></div>
-      <button class="submit-btn" type="button">Send Message &rarr;</button>
-      <p style="margin-top:1rem;font-size:.78rem;color:var(--gray);text-align:center">We respond within one business day. Your information is never shared.</p>
+      <div class="form-group"><label>Give us a little context</label><textarea id="contact-context" rows="4" placeholder="What&rsquo;s the decision you&rsquo;re navigating? What&rsquo;s at stake?"></textarea></div>
+      <button class="submit-btn" id="contact-submit" type="button">Send Message &rarr;</button>
+      <p id="contact-status" style="margin-top:1rem;font-size:.78rem;color:var(--gray);text-align:center">We respond within one business day. Your information is never shared.</p>
     </div>
   </div>
 </section>
@@ -196,6 +196,60 @@
   </div>
 </footer>
 <script src="shared.js"></script>
+<script>
+document.getElementById('contact-submit').addEventListener('click', async function() {
+  const btn = this;
+  const status = document.getElementById('contact-status');
+  
+  const payload = {
+    firstName: document.getElementById('contact-first').value.trim(),
+    lastName: document.getElementById('contact-last').value.trim(),
+    email: document.getElementById('contact-email').value.trim(),
+    company: document.getElementById('contact-company').value.trim(),
+    role: document.getElementById('contact-role').value.trim(),
+    topic: document.getElementById('contact-topic').value,
+    context: document.getElementById('contact-context').value.trim(),
+  };
+
+  if (!payload.firstName) {
+    status.innerHTML = 'Please enter your first name.';
+    status.style.color = '#e53e3e';
+    return;
+  }
+  if (!payload.email) {
+    status.innerHTML = 'Please enter your work email.';
+    status.style.color = '#e53e3e';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.innerHTML = 'Sending your message...';
+  status.style.color = 'var(--gray)';
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      status.innerHTML = '&#10003; Message sent! We will respond within one business day.';
+      status.style.color = '#38a169';
+      btn.textContent = 'Sent!';
+      document.querySelectorAll('.contact-form-wrap input, .contact-form-wrap textarea, .contact-form-wrap select').forEach(el => el.value = '');
+    } else {
+      throw new Error(data.error || 'Failed to send');
+    }
+  } catch (err) {
+    status.innerHTML = 'Something went wrong. Please email us directly or try again.';
+    status.style.color = '#e53e3e';
+    btn.disabled = false;
+    btn.textContent = 'Send Message &rarr;';
+  }
+});
+</script>
 
 <div style="position:fixed;inset:auto auto 40px -80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);filter:blur(18px);pointer-events:none;z-index:-1;"></div>
 
